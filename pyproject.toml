@@ -1,0 +1,20 @@
+[project]
+name = "day-20261119-2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "pcman8130-cloud", email = "pcman8130@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = ["streamlit", "langchain-ollama", "sentence-transformers"]
+
+
+[project.scripts]
+day-20261119-2 = "day_20261119_2:main"
+prepare = "shared:prepare"
+
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"
