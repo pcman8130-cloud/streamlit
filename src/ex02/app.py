@@ -17,7 +17,7 @@ PROMPT = ChatPromptTemplate.from_messages([
 
 @st.cache_resource
 def create_model():
-    model = ChatOllama(model=MODEL, base_url=HOST, temperature=0, reasoning=False)
+    model = ChatOllama(model=MODEL, base_url=HOST, temperature=0, reasoning=True)
     return model.bind_tools(list(TOOLS.values()))   # 도구 목록을 모델에 알려준다
 
 

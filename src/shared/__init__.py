@@ -21,7 +21,7 @@ def prepare():
 def stream_text(messages):
     from langchain_ollama import ChatOllama
 
-    model = ChatOllama(model=MODEL, base_url=HOST, temperature=0, reasoning=False)
+    model = ChatOllama(model=MODEL, base_url=HOST, temperature=0, reasoning=True)
     for part in model.stream(messages):
         yield part.content or ""
 
